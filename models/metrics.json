@@ -1,0 +1,107 @@
+{
+  "feature_names": [
+    "url_length",
+    "hostname_length",
+    "path_length",
+    "num_dots",
+    "num_hyphens",
+    "num_underscores",
+    "num_slashes",
+    "num_digits",
+    "num_special_chars",
+    "num_query_params",
+    "has_at_symbol",
+    "has_ip_address",
+    "has_https",
+    "has_http_in_path",
+    "num_subdomains",
+    "subdomain_length",
+    "is_shortened",
+    "has_suspicious_words",
+    "has_double_slash_redirect",
+    "domain_age_days",
+    "tld_length",
+    "digit_letter_ratio"
+  ],
+  "feature_importance": {
+    "has_suspicious_words": 0.38098111748695374,
+    "has_https": 0.34971362352371216,
+    "tld_length": 0.08030448108911514,
+    "num_hyphens": 0.01694115251302719,
+    "has_at_symbol": 0.014868076890707016,
+    "has_double_slash_redirect": 0.014614882878959179,
+    "path_length": 0.014043270610272884,
+    "num_slashes": 0.01360606960952282,
+    "num_digits": 0.01315876841545105,
+    "num_underscores": 0.012433454394340515,
+    "num_subdomains": 0.01160561665892601,
+    "num_dots": 0.010891221463680267,
+    "num_special_chars": 0.010131153278052807,
+    "subdomain_length": 0.009943244978785515,
+    "digit_letter_ratio": 0.009447278454899788,
+    "is_shortened": 0.008420347236096859,
+    "hostname_length": 0.0080992067232728,
+    "num_query_params": 0.007614828646183014,
+    "url_length": 0.006708926055580378,
+    "has_http_in_path": 0.0044112056493759155,
+    "has_ip_address": 0.002062105340883136,
+    "domain_age_days": 0.0
+  },
+  "results": {
+    "RandomForest": {
+      "model": "RandomForest",
+      "accuracy": 0.9065,
+      "precision": 0.7084,
+      "recall": 0.8831,
+      "f1_score": 0.7862,
+      "roc_auc": 0.9663,
+      "confusion_matrix": [
+        [
+          350339,
+          33741
+        ],
+        [
+          10852,
+          81974
+        ]
+      ]
+    },
+    "XGBoost": {
+      "model": "XGBoost",
+      "accuracy": 0.9349,
+      "precision": 0.9026,
+      "recall": 0.7464,
+      "f1_score": 0.8171,
+      "roc_auc": 0.9708,
+      "confusion_matrix": [
+        [
+          376600,
+          7480
+        ],
+        [
+          23545,
+          69281
+        ]
+      ]
+    },
+    "XGBoost (tuned)": {
+      "model": "XGBoost (tuned)",
+      "accuracy": 0.9382,
+      "precision": 0.9066,
+      "recall": 0.761,
+      "f1_score": 0.8274,
+      "roc_auc": 0.9735,
+      "confusion_matrix": [
+        [
+          376801,
+          7279
+        ],
+        [
+          22184,
+          70642
+        ]
+      ]
+    },
+    "selected_model": "XGBoost (tuned)"
+  }
+}
